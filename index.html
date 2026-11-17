@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SnapPDF — Images to PDF, no upload needed</title>
+<meta name="description" content="Turn JPG, PNG, WebP and GIF images into a PDF right in your browser. Free, unlimited, no signup — your files never leave your device.">
+<link rel="canonical" href="https://abhiscode.github.io/snappdf/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Images to PDF. No upload. Ever.">
+<meta property="og:description" content="Free, unlimited image-to-PDF conversion that runs entirely in your browser.">
+<meta property="og:image" content="https://abhiscode.github.io/snappdf/assets/img/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/svg+xml" href="assets/img/logo.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<link rel="stylesheet" href="assets/css/site.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"SnapPDF","url":"https://abhiscode.github.io/snappdf/","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Convert images to PDF entirely in the browser. No uploads, no signup, no limits."}
+</script>
+</head>
+<body>
+
+<nav><div class="wrap">
+  <a class="brand" href="index.html"><img src="assets/img/logo.svg" alt="SnapPDF logo" width="32" height="32">SnapPDF</a>
+  <div class="links">
+    <a href="#how">How it works</a><a href="#privacy">Privacy</a><a href="#faq">FAQ</a>
+  </div>
+</div></nav>
+
+<header class="hero"><div class="wrap">
+  <h1>Images to PDF. No upload. Ever.</h1>
+  <p class="sub">Free, unlimited, no signup. Conversion runs entirely in your browser — files never leave your device.</p>
+
+  <div class="tool" id="tool">
+    <div class="dropzone" id="dropzone" role="button" tabindex="0" aria-label="Add images">
+      <strong>Drop images here</strong>
+      or click to choose — JPG, PNG, WebP, GIF
+    </div>
+    <input type="file" id="fileinput" accept="image/*" multiple hidden>
+    <div class="filelist" id="filelist"></div>
+
+    <div class="opts">
+      <div class="opt"><label for="opt-size">Page size</label>
+        <select id="opt-size"><option value="a4">A4</option><option value="letter">Letter</option><option value="fit">Fit image</option></select></div>
+      <div class="opt"><label for="opt-orient">Orientation</label>
+        <select id="opt-orient"><option value="auto">Auto</option><option value="portrait">Portrait</option><option value="landscape">Landscape</option></select></div>
+      <div class="opt"><label for="opt-margin">Margin</label>
+        <select id="opt-margin"><option value="small">Small</option><option value="none">None</option><option value="large">Large</option></select></div>
+      <div class="opt"><label for="fname">File name</label>
+        <input type="text" id="fname" value="document.pdf"></div>
+    </div>
+
+    <div class="actions">
+      <button class="btn" id="convert" disabled>Convert to PDF</button>
+      <div class="progress" id="progress"><i></i></div>
+    </div>
+
+    <div class="done-card" id="done">
+      <span class="check"><svg viewBox="0 0 18 18" fill="none"><path d="M3.5 9.5l3.5 3.5 7.5-8" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      <div class="meta"><b id="done-name">document.pdf</b><span id="done-size"></span></div>
+      <a class="btn" id="download" href="#">Download PDF</a>
+      <button class="btn ghost" id="startover" type="button">Start over</button>
+    </div>
+
+    <div class="err" id="err"><span id="err-msg"></span><button id="err-close" type="button" aria-label="Dismiss">×</button></div>
+  </div>
+
+  <div class="hints">
+    <span class="hint">drag or click — your call</span>
+    <span class="hint">JPG · PNG · WebP · GIF</span>
+    <span class="hint badge">No files are sent anywhere — conversion happens on this device</span>
+  </div>
+</div></header>
+
+<section id="how"><div class="wrap">
+  <p class="label reveal">How it works</p>
+  <div class="steps">
+    <div class="step reveal"><div class="n">1</div><h3>Drop your images</h3><p>Drag in photos or scans. Add as many as you like.</p></div>
+    <div class="step reveal"><div class="n">2</div><h3>Arrange and adjust</h3><p>Reorder pages, pick a page size and margins.</p></div>
+    <div class="step reveal"><div class="n">3</div><h3>Download the PDF</h3><p>One click. The file is created on your device, not a server.</p></div>
+  </div>
+</div></section>
+
+<section id="privacy"><div class="wrap">
+  <div class="privacy-grid">
+    <div class="reveal">
+      <p class="label">Privacy</p>
+      <h2>Everything happens in this browser</h2>
+      <p>Most converters ask you to upload your images to their servers. SnapPDF never sees a single file. The conversion code runs on your device — the same place your images already are.</p>
+      <div class="donts"><span>No uploads</span><span>No accounts</span><span>No tracking</span><span>No watermarks</span><span>No daily limits</span></div>
+    </div>
+    <figure class="reveal">
+      <img src="assets/img/privacy-photo-1600.jpg"
+           srcset="assets/img/privacy-photo-400.webp 400w, assets/img/privacy-photo-800.webp 800w, assets/img/privacy-photo-1200.webp 1200w, assets/img/privacy-photo-1600.webp 1600w"
+           sizes="(max-width: 780px) 100vw, 420px"
+           alt="A box of printed receipts and paper documents" width="1600" height="1200" loading="lazy">
+      <figcaption>The paperwork stays where it already was.</figcaption>
+    </figure>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <p class="label reveal">What you get</p>
+  <div class="feats">
+    <div class="feat reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><path d="M14 17.5h7M17.5 14v7"/></svg><h3>Batch + reorder</h3><p>Convert dozens of images at once and set the page order before you export.</p></div>
+    <div class="feat reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 7h6M9 11h6M9 15h4"/></svg><h3>Your page, your way</h3><p>A4, Letter or exact-fit pages, portrait or landscape, with or without margins.</p></div>
+    <div class="feat reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 4.4-3.2 7.8-8 9-4.8-1.2-8-4.6-8-9V6z"/><path d="M9 12l2.2 2.2L15.5 10"/></svg><h3>Actually free</h3><p>No task counters, no signup walls, no watermarks, no "pro" tier.</p></div>
+    <div class="feat reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5a8 8 0 0 1 14 0M8.5 16a4 4 0 0 1 7 0"/><circle cx="12" cy="19" r="1.4" fill="currentColor" stroke="none"/></svg><h3>Works offline</h3><p>Once the page loads, you can go off the internet and it still works.</p></div>
+  </div>
+</div></section>
+
+<section id="faq"><div class="wrap">
+  <p class="label reveal" style="text-align:center">FAQ</p>
+  <div class="faq-wrap reveal">
+    <details open><summary>Are my images uploaded anywhere?</summary><p>No. All conversion runs in your browser using JavaScript on your device. There is no server that receives your files — you can even disconnect after the page loads.</p></details>
+    <details><summary>Is it really free?</summary><p>Yes. There's no account, no daily limit and no paid tier.</p></details>
+    <details><summary>Which formats work?</summary><p>JPG, PNG, WebP and GIF. Most phone photos and scans work out of the box.</p></details>
+    <details><summary>Is there a limit on images or size?</summary><p>No fixed limit. Very large batches depend on your device's memory — most laptops handle hundreds of pages easily.</p></details>
+    <details><summary>Can I merge images into one PDF?</summary><p>Yes — everything you add becomes one PDF, in the order you set.</p></details>
+  </div>
+</div></section>
+
+<footer><div class="wrap">
+  <span>SnapPDF — free, private, runs locally.</span>
+  <span><a href="privacy.html">Privacy</a> · Photo: ben_osteen, <a href="https://creativecommons.org/licenses/by/2.0/" rel="noopener">CC BY 2.0</a></span>
+</div></footer>
+
+<script src="assets/js/jspdf.umd.min.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>

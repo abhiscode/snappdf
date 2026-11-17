@@ -1,0 +1,33 @@
+{
+  "privacy-photo": {
+    "source": "imagery\\raw\\keep\\privacy-photo.jpg",
+    "alt": "",
+    "variants": [
+      {
+        "w": 400,
+        "h": 300,
+        "webp": "privacy-photo-400.webp",
+        "bytes": 19728
+      },
+      {
+        "w": 800,
+        "h": 600,
+        "webp": "privacy-photo-800.webp",
+        "bytes": 45826
+      },
+      {
+        "w": 1200,
+        "h": 900,
+        "webp": "privacy-photo-1200.webp",
+        "bytes": 72784
+      },
+      {
+        "w": 1600,
+        "h": 1200,
+        "webp": "privacy-photo-1600.webp",
+        "bytes": 101770,
+        "jpg": "privacy-photo-1600.jpg"
+      }
+    ]
+  }
+}

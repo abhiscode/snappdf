@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://abhiscode.github.io/snappdf/sitemap.xml
